@@ -1,0 +1,66 @@
+{
+  "name": "open-weather",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@headlessui/react": "^1.7.14",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
+    "@mui/styled-engine-sc": "^5.12.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll-into-view": "^1.12.1",
+    "styled-components": "^5.3.9",
+    "wait-on": "^7.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start --env .env & wait-on http://localhost:3000",
+    "build": "react-scripts build",
+    "build-ci": "REACT_APP_API_KEY=2848195f80ab69cb3bd3003ab44f492d REACT_APP_WEATHER_URL=https://openweathermap.org/img/wn/ REACT_APP_GEO_URL=https://api.openweathermap.org/geo/1.0/direct? REACT_APP_ONE_CALL=https://api.openweathermap.org/data/2.5/onecall? react-scripts build",
+    "build-dev": "REACT_APP_SERVICE_URL=https://staff-dev-api.cyberfortgroup.com/api/ REACT_APP_API_KEY=2848195f80ab69cb3bd3003ab44f492d REACT_APP_WEATHER_URL=https://openweathermap.org/img/wn/ REACT_APP_GEO_URL=https://api.openweathermap.org/geo/1.0/direct? REACT_APP_ONE_CALL=https://api.openweathermap.org/data/2.5/onecall? react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --config-file cypress.config.js"
+  },
+
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "babel-jest": "^29.5.0",
+    "cypress": "^12.15.0",
+    "cypress-slow-down": "^1.2.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.7",
+    "tailwindcss": "^3.3.2"
+  }
+}
